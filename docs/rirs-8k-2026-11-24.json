@@ -1,0 +1,136 @@
+{
+  "source_sha256": "e4e7951a852d6d6b1d1875c60a30efd2d73bd04aa206f8e6e2a725c91e0c2fbd",
+  "source_sample_rate_hz": 48000,
+  "model_sample_rate_hz": 8000,
+  "conversion": "h8[k] = 6 * (IIR * h48/(sweep_scale*external_gain) * IIR)[6*k]",
+  "converter_source_sha256": "d5f853ff63214014bb484e26768c8194f1c2d54158ff8aa2b53065d7c735f1bb",
+  "converter_coefficients_float32": [
+    [
+      0.011213673278689384,
+      0.00602902052924037,
+      0.011213673278689384,
+      -0.9873420000076294,
+      0.25982674956321716
+    ],
+    [
+      1.0,
+      -1.2949467897415161,
+      1.0,
+      -1.2639789581298828,
+      0.4868239164352417
+    ],
+    [
+      1.0,
+      -1.6511869430541992,
+      1.0,
+      -1.5428956747055054,
+      0.7229496240615845
+    ],
+    [
+      1.0,
+      -1.743005394935608,
+      1.0,
+      -1.7466144561767578,
+      0.9111160635948181
+    ]
+  ],
+  "decimation_phase": 0,
+  "passthrough_gain_assumed": 1.0,
+  "cpu_time_added_as_delay": false,
+  "peak_normalization": false,
+  "external_gain_calibrated": true,
+  "validated_for_control": false,
+  "pending": [
+    "Residual external phase response",
+    "Physical port timing equivalence",
+    "Adaptation sign/polarity",
+    "Live DMA deadline and acoustic cancellation"
+  ],
+  "active_dimensions": {
+    "G": 64,
+    "F": 512,
+    "W": 576,
+    "block": 8
+  },
+  "source_of_timing": "Synthetic coefficients, not timing of these measured models",
+  "source_archive": "post-downsampling.mdat",
+  "external_loopback": {
+    "sha256": "42c21ef1b139a73b9d3a204c4c2386e0b41e4eb3bf5f6fb4d333a572e0725f31",
+    "measurement": "LOOPBACK_SCALE_NOV24",
+    "gain_linear_signed": 0.7836176031795536,
+    "magnitude_dB": -2.1179163315992344,
+    "polarity": 1,
+    "phase_abs_95th_deg_after_polarity": 5.660741110668079,
+    "sweep_scale": 0.1,
+    "method": "Scalar magnitude500-2000Hz with timing-aware polarity, divided by actual sweep.scale",
+    "limitation": "Scalar correction retains residual external frequency/phase response; requires unchanged physical controls. Raw ADC clipping samples are unavailable in mdat.",
+    "archive": "LOOPBACK_SCALE_NOV24.mdat"
+  },
+  "models": {
+    "ERR": {
+      "source_measurement": "ERROR Nov 24",
+      "acquired": "2026-11-24T17:11:26.201000-03:00",
+      "source_npz_sha256": "265c5cd0c7e2e2f658b1b59b1ab839c53b0f223fee28b04e516f0c3e3c9e5fac",
+      "sweep_peak_scale": 0.1778279410038923,
+      "scale_factor_before_SRC": 7.176221193967963,
+      "alignment": {
+        "native_zero_index": 47851.96134567034,
+        "fractional_grid_advance_samples": 0.9613456703373231,
+        "target_first_time_s": 0.0,
+        "method": "Padded bandlimited fractional interpolation, no arrival alignment"
+      },
+      "source_capacity_taps": 1024,
+      "active_first_tap": 0,
+      "active_end_tap": 64,
+      "active_duration_ms": 8.0,
+      "coefficient_peak_index": 29,
+      "coefficient_peak_ms": 3.625,
+      "source_coefficient_sha256": "ff143b17eeed76b64e2dfbb234e369e67165b2ade06d82fcffacf1b0d306e53a",
+      "active_coefficient_sha256": "bfe061b203ce4f22979cae93924a7cabe03645d0c6d1b9bf756a58a9ee3aa869",
+      "discarded_instantaneous_feedback_tap": null,
+      "end_fade_applied": false
+    },
+    "REF": {
+      "source_measurement": "REFERENCE Nov 24",
+      "acquired": "2026-11-24T17:09:32.862000-03:00",
+      "source_npz_sha256": "0300ab968ff99f9058dab4cb7d0f79d1427fe7e18561e850dab4505170df0287",
+      "sweep_peak_scale": 0.251188643150958,
+      "scale_factor_before_SRC": 5.080375542077725,
+      "alignment": {
+        "native_zero_index": 47717.89686460736,
+        "fractional_grid_advance_samples": 0.8968646073626587,
+        "target_first_time_s": 0.0,
+        "method": "Padded bandlimited fractional interpolation, no arrival alignment"
+      },
+      "source_capacity_taps": 4096,
+      "active_first_tap": 0,
+      "active_end_tap": 512,
+      "active_duration_ms": 64.0,
+      "coefficient_peak_index": 52,
+      "coefficient_peak_ms": 6.5,
+      "source_coefficient_sha256": "4e316720787af38bebb3dc6e701a72ea1024e8dbcb0003574f4b65941fe41393",
+      "active_coefficient_sha256": "083eee0bcf04e9bf0f68bee1aaea44a1439f0c948bb8ba55bc7625580a8d6faa",
+      "discarded_instantaneous_feedback_tap": -1.5506213202343133e-08,
+      "end_fade_applied": false
+    }
+  },
+  "artifacts_not_included": [
+    "Original REW mdat files",
+    "NPZ measurement arrays",
+    "Offline exporters",
+    "Benchmark harness and raw logs"
+  ],
+  "synthetic_timing_reference": {
+    "date": "2026-11-24",
+    "MCU": "STM32F446RE",
+    "nominal_clock_hz": 168000000,
+    "optimization": "O3, no LTO or fast-math",
+    "measured_blocks": 256,
+    "io_fs_hz": 48000,
+    "control_fs_hz": 8000,
+    "max_us": 888.363098,
+    "budget_us": 1000,
+    "over_budget_blocks": 0,
+    "scope": "Includes 48->8->FxLMS->8->48 pipeline. IRQs masked during timing, I2S/DMA inactive. Synthetic coefficients. Not live scheduling or convergence validation."
+  }
+}

@@ -1,0 +1,9 @@
+/Debug/
+/Release/
+/.metadata/
+*.su
+*.cyclo
+*.log
+/.settings/language.settings.xml
+/docs/migration-check.json
+/docs/fft-cleanup-check.json

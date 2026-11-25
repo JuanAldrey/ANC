@@ -1,0 +1,4 @@
+* text=auto eol=lf
+
+# Preserve official vendor files and their recorded SHA256 values.
+Drivers/** -text
